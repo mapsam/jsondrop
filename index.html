@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+  <title>hello world</title>  
+  <script src="jsondrop.js"></script>
+  <style>
+  body {
+    padding:0;
+    margin:0;
+  }
+  #drop-area {
+    position:absolute;
+    width:100%;
+    height:100%;
+    padding:20px;
+    background-color:#e5e5e5;
+  }
+  #drop-area.dragging {
+    background-color:#f6f6f6;
+  }
+  </style>
+</head>
+<body>
+  <div id="drop-area">DROP YOUR STUFF HERE!</div>
+  <script>
+  var dropArea = new jsondrop('drop-area');
+  </script>
+</body>
+</html>
