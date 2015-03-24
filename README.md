@@ -25,6 +25,21 @@
 var dropArea = new jsondrop('drop-area');
 ```
 
+## Options
+
+#### `onEachFile`
+
+You can pass the option `onEachFile` to handle the every file as it is uploaded with whatever javascript you wish. To do this, simply add it as an option.
+
+```javascript
+var dropArea = new jsondrop('drop-area', {
+    onEachFile: function(file) {
+        console.log(file);
+        // and other stuff ...
+    }
+});
+```
+
 ## Where are my files stored?
 
 In step three above, you can see that you have access to an entire `jsondrop` object in your own variable `dropArea`. To access the files that have been dropped in this specific element you'll have to navigate the object tree in `dropArea`. Below is a quick GIF of the process being inspected through a browser inspector.
