@@ -10,17 +10,17 @@ jsondrop.prototype._readFiles = function(files) {
   var _this = this;
   for (i = 0; i < files.length; i++) {
     (function(file){
-      fr = new FileReader();
+      var fr = new FileReader();
+      fr.readAsText(file, 'UTF-8');
       fr.onload = function() {
         var json = JSON.parse(fr.result);
         var newElement = {
           name: file.name,
           data: json,
           uploaded: Math.floor(Date.now() / 1000)
-        }
+        };
         _this.files.push(newElement);
-      }
-      fr.readAsText(file, 'UTF-8');
+      };
     })(files[i]);
   }
 }
