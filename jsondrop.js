@@ -20,6 +20,9 @@ jsondrop.prototype._readFiles = function(files) {
           uploaded: Math.floor(Date.now() / 1000)
         };
         _this.files.push(newElement);
+
+        // run onEachFile if specified by user
+        if(_this.options.onEachFile) _this.options.onEachFile(newElement);
       };
     })(files[i]);
   }

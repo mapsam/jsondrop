@@ -23,7 +23,11 @@
 <body>
   <div id="drop-area">DROP YOUR STUFF HERE!</div>
   <script>
-  var dropArea = new jsondrop('drop-area');
+  var dropArea = new jsondrop('drop-area', {
+    onEachFile: function(file) {
+      console.log(file);
+    }
+  });
   </script>
 </body>
 </html>
